@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form>: Container for all input fields. 'action' defines where to send form data; 'method' defines the HTTP method (e.g., POST/GET) -->
+    <form action="/action.php" method="post">
+        <!-- <label>: Binds a text label to an input element using the 'for' attribute matching the input's 'id' -->
+        <label for="username">Username:</label>
+        <!-- type="text": Used for basic, single-line text input (e.g., names, usernames) -->
+        <input type="text" id="username" name="username"><br>
+
+        <!-- type="password": Obscures entered characters for security; used for passwords and sensitive keys -->
+        <input type="password" name="password" placeholder="Enter Password"><br>
+
+        <!-- type="checkbox": Allows selecting zero, one, or multiple independent choices -->
+        <input type="checkbox" name="subscribe" value="yes"> Subscribe<br>
+
+        <!-- type="radio": Allows selecting exactly one choice from a group of mutually exclusive options sharing the same 'name' -->
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female<br>
+
+        <!-- <select>: Creates a drop-down selection list where users choose one or more <option> elements -->
+        <select name="country">
+            <option value="us">USA</option>
+            <option value="ca">Canada</option>
+        </select><br>
+
+        <!-- <textarea>: A multi-line text input box, useful for descriptions, reviews, or comments -->
+        <textarea name="comments" rows="4" cols="30"></textarea><br>
+
+        <!-- type="file": Allows the user to select and upload one or more files from their local device -->
+        <input type="file" name="resume"><br>
+
+        <!-- type="number": Restricts input to numerical values, supporting 'min' and 'max' constraints -->
+        <input type="number" name="age" min="18" max="100"><br>
+
+        <!-- type="range": Displays a slider control for selecting a numeric value within a specified range -->
+        <input type="range" name="volume" min="0" max="100"><br>
+
+        <!-- type="date": Displays a date picker interface for selecting a specific year, month, and day -->
+        <input type="date" name="dob"><br>
+
+        <!-- type="email": Validates that the input contains a correctly formatted email address (contains @ and domain) -->
+        <input type="email" name="email"><br>
+
+        <!-- type="url": Validates that the input is a properly formatted URL (e.g., starts with http:// or https://) -->
+        <input type="url" name="website"><br>
+
+        <!-- type="search": Optimized for search queries, sometimes providing a 'clear' button to quickly reset input -->
+        <input type="search" name="query"><br>
+
+        <!-- <button type="submit">: Triggers the form submission, sending all gathered form data to the defined 'action' URL -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

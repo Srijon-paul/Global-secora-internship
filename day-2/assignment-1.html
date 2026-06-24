@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Course Enrollment Form</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Alice Blue background */
+            font-family: Arial, sans-serif;
+            color: #333333;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #000080; /* Navy Blue */
+            text-decoration: underline;
+        }
+        h5{
+            text-align: center;
+        }
+
+        .form-container {
+            width: 450px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border: 3px solid #000080;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 5px 5px 10px #cccccc;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 95%;
+            padding: 8px;
+            border: 2px solid #333333;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .gender-group,
+        .mode-group {
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            background-color: #4caf50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid #2e7d32;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Enrollment Form</h1>
+        <h5>by Srijon Paul</h5>
+        <form action="/enroll-submit.php" method="POST">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="gender-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male" style="display:inline; font-weight:normal;">Male</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female" style="margin-left: 15px;">
+                    <label for="female" style="display:inline; font-weight:normal;">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required>
+                    <option value="">-- Choose a Course --</option>
+                    <option value="web-dev">Web Development</option>
+                    <option value="python">Python Programming</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="cyber-security">Cyber Security</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Mode of Study:</label>
+                <div class="mode-group">
+                    <input type="checkbox" id="online" name="mode" value="online">
+                    <label for="online" style="display:inline; font-weight:normal;">Online</label>
+                    
+                    <input type="checkbox" id="offline" name="mode" value="offline" style="margin-left: 15px;">
+                    <label for="offline" style="display:inline; font-weight:normal;">Offline</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Comments / Questions:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Any Comments"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enroll Now</button>
+        </form>
+    </div>
+
+</body>
+</html>
