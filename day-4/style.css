@@ -1,9 +1,15 @@
-.bg{
-    background-color: aqua;
+.main{
+    height: 300px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    grid-template-areas:
+    "box-1 box-1 box-2 box-3"
+    "box-4 box-5 box-5 box-3";
+    gap: 10px;
 }
-.clr{
-    color: brown;
-}
-.bdr{
-    border: 3px solid black;
+.a, .b, .c, .d, .e {
+    height: auto;
+    background-color: green;
 }
