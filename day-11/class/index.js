@@ -10,8 +10,9 @@ app.listen(PORT, (req, res) => {
 app.get("/", (req, res)=>{
     res.send("welcome to the home page")
 });
-app.get("/student", (req, res)=>{
-    res.send("welcome to the student page")
+app.get("/student/:naam", (req, res)=>{
+    const naam = req.params.naam;
+    res.send(`welcome to the ${naam} page`)
 });
 app.get("/admin", (req, res)=>{
     res.send("welcome to the admin page")
